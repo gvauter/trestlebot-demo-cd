@@ -8,7 +8,7 @@ x-trestle-rule-info:
   parameter:
     name: sshd_client_alive_count_max
     description: This value sets the number of client alive messages which may be sent without sshd receiving any messages back from the client.
-      alternative-values: {'default': '3', '0': '0', '3': '3'}
+    alternative-values: {'default': '3', '0': '0', '3': '3'}
     default-value: '3'
   profile:
     description: Example Using NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5
