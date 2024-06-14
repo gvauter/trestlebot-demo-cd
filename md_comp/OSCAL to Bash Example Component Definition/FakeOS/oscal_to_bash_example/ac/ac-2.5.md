@@ -59,16 +59,9 @@ ______________________________________________________________________
 
 <!-- Note that the list of rules under ### Rules: is read-only and changes will not be captured after assembly to JSON -->
 
-<!-- Add control implementation description here for control: ac-2.5 -->
-
 SSH allows administrators to set a network responsiveness timeout interval.  After this interval has passed, the unresponsive client will be automatically logged out.
 
 To set this timeout interval, edit the following line in `/etc/ssh/sshd_config` as follows:
-
-```
-ClientAliveInterval <sshd_client_alive_interval> 
-```
-
 
 ### Rules:
 
