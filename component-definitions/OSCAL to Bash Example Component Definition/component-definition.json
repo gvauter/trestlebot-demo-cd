@@ -1,71 +1,121 @@
 {
   "component-definition": {
-    "uuid": "1c876028-58f0-4cb4-9b2c-daa7c6230afd",
+    "uuid": "cb0883eb-9cb9-465b-ac60-187091b0cbdb",
     "metadata": {
       "title": "Component definition for OSCAL to Bash Example Component Definition",
-      "last-modified": "2024-06-13T20:26:12+00:00",
+      "last-modified": "2024-06-14T17:29:49+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "bbfe22c3-4a9f-424f-a989-0c36914523da",
-        "type": "service",
-        "title": "Inactivity Logout",
-        "description": "Inactivity logout is behavior or policy-based and requires users to take physical action to log out when they are expecting inactivity longer than the defined period.",
+        "uuid": "33e62878-cec2-483d-8bd5-eb4c3be94b5b",
+        "type": "software",
+        "title": "FakeOS",
+        "description": "FakeOS is a fake Linux based operating system built by no one.",
         "props": [
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-ac-2.5",
+            "value": "sshd_set_client_alive_interval",
             "remarks": "rule_set_0"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-2.5",
+            "value": "SSH allows administrators to set a network responsiveness timeout interval. After this interval has passed, the unresponsive client will be automatically logged out.",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "sshd_client_alive_interval",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "SSH idle timeout value in seconds.",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Parameter_Value_Alternatives",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "{\"default\": \"300\", \"5min\": \"300\", \"10min\": \"600\", \"1min\": \"60\", \"15min\": \"900\"}",
             "remarks": "rule_set_0"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-ac-11",
+            "value": "sshd_set_client_alive_count_max",
             "remarks": "rule_set_1"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-11",
+            "value": "Session lock should conceal information previously visible on the display with a publicly viewable image or blank screen with the additional caveat that none of the images convey sensitive information.",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "sshd_client_alive_count_max",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "This value sets the number of client alive messages which may be sent without sshd receiving any messages back from the client.",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Value_Alternatives",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "{\"default\": \"3\", \"0\": \"0\", \"3\": \"3\"}",
             "remarks": "rule_set_1"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "07f6390f-dc19-4f07-a3ec-80bc56aa90a4",
+            "uuid": "b3a0c290-ae6a-42c6-9253-b70210b78fc8",
             "source": "trestle://profiles/oscal_to_bash_example/profile.json",
             "description": "Example Using NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures",
+            "set-parameters": [
+              {
+                "param-id": "sshd_client_alive_interval",
+                "values": [
+                  "300"
+                ]
+              },
+              {
+                "param-id": "sshd_client_alive_count_max",
+                "values": [
+                  "3"
+                ]
+              }
+            ],
             "implemented-requirements": [
               {
-                "uuid": "2e6a0e1a-10fe-4d4b-bfd7-404dbb9d0035",
+                "uuid": "9a940335-0c42-4a32-b6b5-ff5690422b2e",
                 "control-id": "ac-2.5",
                 "description": "",
                 "props": [
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-ac-2.5"
+                    "value": "sshd_set_client_alive_interval"
                   }
                 ]
               },
               {
-                "uuid": "55607158-ff8c-447e-8275-3eac35b5e1e0",
+                "uuid": "e9f831c8-c5cf-46b7-b829-efa069ca2bfa",
                 "control-id": "ac-11",
                 "description": "",
                 "props": [
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-ac-11"
+                    "value": "sshd_set_client_alive_count_max"
                   }
                 ]
               }
