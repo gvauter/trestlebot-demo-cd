@@ -3,7 +3,7 @@
     "uuid": "cb0883eb-9cb9-465b-ac60-187091b0cbdb",
     "metadata": {
       "title": "Component definition for OSCAL to Bash Example Component Definition",
-      "last-modified": "2024-06-14T17:29:49+00:00",
+      "last-modified": "2024-06-14T17:30:44.993886+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
@@ -104,6 +104,10 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "sshd_set_client_alive_interval"
+                  },
+                  {
+                    "name": "implementation-status",
+                    "value": "planned"
                   }
                 ]
               },
@@ -116,12 +120,22 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "sshd_set_client_alive_count_max"
+                  },
+                  {
+                    "name": "implementation-status",
+                    "value": "planned"
                   }
                 ]
               }
             ]
           }
         ]
+      },
+      {
+        "uuid": "e8812eeb-2b57-4fc4-b167-5098682ebac5",
+        "type": "REPLACE_ME",
+        "title": "Inactivity Logout",
+        "description": "REPLACE_ME"
       }
     ]
   }
