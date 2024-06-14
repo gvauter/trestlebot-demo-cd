@@ -1,12 +1,16 @@
 x-trestle-component-info:
-  description: Inactivity logout is behavior or policy-based and requires users to
-    take physical action to log out when they are expecting inactivity longer than
-    the defined period.
-  name: Inactivity Logout
-  type: service
+  description: FakeOS is a fake Linux based operating system built by no one.
+  name: FakeOS
+  type: software
 x-trestle-rule-info:
-  description: Rule for ac-2.5
-  name: rule-ac-2.5
+  description: SSH allows administrators to set a network responsiveness timeout interval.
+    After this interval has passed, the unresponsive client will be automatically logged out.
+  name: sshd_set_client_alive_interval
+  parameter:
+    name: sshd_client_alive_interval
+    description: SSH idle timeout value in seconds.
+    alternative-values: {'default': '300', '5min': '300', '10min': '600', '1min': '60', '15min': '900'}
+    default-value: '300'
   profile:
     description: Example Using NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5
       Assessment Procedures

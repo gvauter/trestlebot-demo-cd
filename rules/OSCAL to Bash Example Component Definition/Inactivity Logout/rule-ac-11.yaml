@@ -1,12 +1,15 @@
 x-trestle-component-info:
-  description: Inactivity logout is behavior or policy-based and requires users to
-    take physical action to log out when they are expecting inactivity longer than
-    the defined period.
-  name: Inactivity Logout
-  type: service
+  description: FakeOS is a fake Linux based operating system built by no one.
+  name: FakeOS
+  type: software
 x-trestle-rule-info:
-  description: Rule for ac-11
-  name: rule-ac-11
+  description: Session lock should conceal information previously visible on the display with a publicly viewable image or blank screen with the additional caveat that none of the images convey sensitive information.
+  name: sshd_set_client_alive_count_max
+  parameter:
+    name: sshd_client_alive_count_max
+    description: This value sets the number of client alive messages which may be sent without sshd receiving any messages back from the client.
+    alternative-values: {'default': '3', '0': '0', '3': '3'}
+    default-value: '3'
   profile:
     description: Example Using NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5
       Assessment Procedures
